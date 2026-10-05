@@ -1,0 +1,13 @@
+# Local / editor
+.env
+.envrc
+*~
+.DS_Store
+
+# This repo builds nothing inside itself -- all outputs go to the shared cache
+# (../argus-build-cache, outside the repo). These patterns only guard against
+# large artifacts stray-dropped into the repo.
+*.tar.gz
+brightsign-x86_64-cobra-toolchain-*.sh
+/sdk/
+/bsoe/
