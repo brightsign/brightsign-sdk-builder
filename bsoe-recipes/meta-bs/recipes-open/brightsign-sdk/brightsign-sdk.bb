@@ -46,11 +46,17 @@ TOOLCHAIN_TARGET_TASK:append = " \
 "
 
 # --- Mosquitto: MQTT broker & client libraries for IoT/telemetry integration ---
-# Includes shared lib (for app linking), dev headers/pkg-config, and tools
+# The runtime shared objects live in their own split packages: libmosquitto1 owns
+# libmosquitto.so.1 and libmosquittopp1 owns libmosquittopp.so.1 (meta-bs's
+# mosquitto 1.5.8, which wins on layer priority). mosquitto-dev supplies only the
+# headers and the .so dev symlinks, so without naming the lib packages the SDK
+# sysroot carries no .so.1 and a consumer's `-lmosquitto` link resolves to nothing.
 TOOLCHAIN_TARGET_TASK:append = " \
     mosquitto \
     mosquitto-dev \
     mosquitto-clients \
+    libmosquitto1 \
+    libmosquittopp1 \
 "
 
 # The filename ends up with "toolchain" in it later (via
