@@ -6,7 +6,6 @@ toolkit**, and the **`rknn_tk2` Docker image**. Run it **once per build box**;
 consumer repos (e.g. `argus-rtsp-watcher`) then build against the shared cache
 this fills and never reproduce these heavy steps themselves.
 
-Disclaimer: This works for me — that's the entire guarantee. Built with AI in the loop, so check your own biases before you love it or hate it on principle. Use at your own risk, fork freely, and don't @ me when it explodes. (But do drop me a note if it helps — pay it forward.)
 
 ## Why this exists
 
