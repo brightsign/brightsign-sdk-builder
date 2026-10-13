@@ -1,0 +1,49 @@
+brightsign-sdk-builder
+Copyright 2026 BrightSign, LLC
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The Apache-2.0 license applies ONLY to the original work in this repository
+authored by BrightSign — the provisioning scripts, the Makefile, the Yocto
+recipe metadata under bsoe-recipes/ that is original to this project, and the
+documentation.
+
+This repository is a *provisioner*. It downloads, clones, patches, and builds a
+number of independent third-party components. Those components are NOT licensed
+under this repository's Apache-2.0 license and are NOT redistributed by this
+repository; each retains its own, separate license, which governs your use of
+that component. Obtaining, building, or redistributing any of them is subject to
+the terms of its respective license and copyright holder.
+
+Third-party components acquired or built by this provisioner include, but are
+not limited to:
+
+  - BrightSign OS source
+      Fetched from BrightSign. Governed by BrightSign's source license and the
+      upstream licenses of the many OpenEmbedded/Yocto packages it contains.
+
+  - RKNN toolkit — rknn-toolkit2 and rknn_model_zoo
+      https://github.com/airockchip/rknn-toolkit2
+      https://github.com/airockchip/rknn_model_zoo
+      Copyright Rockchip Electronics Co., Ltd. Governed by their respective
+      upstream licenses.
+
+  - Yocto / OpenEmbedded build system and the upstream open-source packages
+      pulled into the SDK sysroot by the recipes in bsoe-recipes/, including
+      (non-exhaustively):
+        - OpenCV                 (Apache-2.0)
+        - GStreamer + plugins    (LGPL-2.1 and others)
+        - libpng                 (libpng/PNG Reference Library license)
+        - libwebsockets          (MIT)
+        - ADE                    (Apache-2.0)
+      Each package retains the license declared by its upstream project and/or
+      its Yocto recipe.
+
+  - Docker base images referenced by the toolkit build (e.g. Ubuntu-based
+      images), governed by their own licenses.
+
+The lists above are provided for convenience and are not exhaustive or
+authoritative. For each component, consult the license files distributed with
+that component's own source for the complete and binding terms. If you
+redistribute any artifact produced by this provisioner, you are responsible for
+complying with every applicable third-party license.

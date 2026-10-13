@@ -83,3 +83,18 @@ Run `make` with no arguments to list all targets.
 
 - [docs/DESIGN.md](docs/DESIGN.md) — architecture, the shared-cache contract, the
   SDK build sequence, the recipe layer, and the decision log.
+
+## License
+
+The original work in this repository — the provisioning scripts, the Makefile,
+the `bsoe-recipes/` recipe metadata authored here, and the documentation — is
+licensed under the [Apache License 2.0](LICENSE).
+
+This repository is a **provisioner**: it downloads, clones, patches, and builds
+independent third-party components (BrightSign OS source, the Rockchip RKNN
+toolkit, and the open-source packages pulled in through Yocto/OpenEmbedded such
+as OpenCV, GStreamer, libpng, and libwebsockets). **Those components are not
+covered by this repository's Apache-2.0 license and are not redistributed here —
+each retains its own, separate license, which governs your use of it.** See
+[NOTICE](NOTICE) for details, and consult each component's own source for the
+binding terms.
